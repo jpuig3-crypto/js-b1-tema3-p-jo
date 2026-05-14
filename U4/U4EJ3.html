@@ -88,6 +88,42 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        const mySubmit = document.getElementById("mySubmit");
+
+        const myContent = document.getElementById("myContent");
+
+        const gps = document.getElementById("gps");
+
+        const leatherSeats = document.getElementById("leather-seats");
+
+        const sunroof = document.getElementById("sunroof");
+
+        const armoredWindows = document.getElementById("armored-windows");
+
+        const tintedWindows = document.getElementById("tinted-windows");
+
+        mySubmit.addEventListener(
+            "click",
+            function(event) {
+
+                const someChecked =
+
+                gps.checked ||
+                leatherSeats.checked ||
+                sunroof.checked ||
+                armoredWindows.checked ||
+                tintedWindows.checked;
+
+                if (!someChecked) {
+
+                event.preventDefault();
+
+                myContent.textContent = 
+                    "you must select almost one extra";
+                }
+            }
+            
+        );
 
     </script>
     <script defer id="test">
