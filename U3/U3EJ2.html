@@ -78,7 +78,30 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-        
+        const redBox = document.getElementsByClassName("red") [0];
+        const greenBox = document.getElementsByClassName("green") [0];
+        const orangeBox = document.getElementsByClassName("orange") [0];
+        const myContent = document.getElementById("myContent");
+
+        function showClass(event) {
+            myContent.innerHTML = event.target.className;
+        }
+
+        redBox.addEventListener(
+            "click",
+            showClass
+        );
+
+        greenBox.addEventListener(
+            "click",
+            showClass
+        );
+
+        orangeBox.addEventListener(
+            "click",
+            showClass
+        );
+
     </script>
     <script defer id="test">
         /**
