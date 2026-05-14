@@ -47,7 +47,43 @@
     </div>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-          
+        const circle = document.getElementById("circle");
+        const rect = document.getElementById("rect");
+        const polygon = document.getElementById("polygon");
+
+        circle.addEventListener(
+          "mouseover",
+          function () {
+
+            circle.setAttribute(
+              "class",
+              "green"
+            );
+          }
+        );
+
+        rect.addEventListener(
+          "mouseover",
+          function () {
+
+            rect.setAttribute(
+              "class",
+              "orange"
+            );
+          }
+        );
+
+        polygon.addEventListener(
+          "mouseover",
+          function () {
+
+            circle.setAttribute(
+              "class",
+              "red"
+            );
+          }
+        );
+
 	</script>
     <script defer id="test">
         /**
