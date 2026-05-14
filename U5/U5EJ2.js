@@ -26,6 +26,34 @@ localStorage.setItem(
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+class triangle {
+
+	constructor(base, height, rightTriangle){
+		this.base = base;
+		this.height = height;
+		this.rightTriangle = rightTriangle;
+	}
+}
+
+const trianglesJSON = localStorage.getItem("myTriangles");
+
+const parseTriangles = JSON.parse(trianglesJSON);
+
+const myTriangles = new triangle(
+	parseTriangles[0].base,
+	parseTriangles[0].height,
+	parseTriangles[0].rightTriangle
+);
+
+myTriangles.rightTriangle = false;
+
+sessionStorage.setItem(
+	"newTriangle",
+	JSON.stringify(myTriangle)
+);
+
+console.log(myTriangle);
+
 /**
  * TEST
  * The purpose of this code is purely for TESTING PURPOSES, 
