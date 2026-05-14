@@ -54,6 +54,54 @@
     </body>
 	<script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+		function createTitle(text) {
+
+			let titleExists = document.querySelector(".title");
+
+			if (titleExists !== null) {
+				return;
+			}
+
+			let h1 = document.createElement("h1");
+
+			h1.textContent = text;
+
+			titleDiv.appendChild(h1);
+
+			document
+				.getElementById("myContent")
+				.appendChild(titleDiv);
+		}
+
+		function createParagraph(text) {
+
+			let titleDiv =
+				document.querySelector(".title");
+			
+			if (titleDiv === null) {
+				return;
+			}
+
+			let paragraph =
+				document.createElement("p");
+
+			paragraph.classList.add("paragraph");
+
+			paragraph.textContent = text;
+
+			titleDiv.appendChild(paragraph);
+		}
+
+		createTitle("MY TITLE");
+
+		createParagraph("first paragraph");
+		createParagraph("second paragraph");
+		createParagraph("third paragraph");
+
+		let paragraphToDelete = 
+			document.querySelector(".paragraph");
+
+		paragraphToDelete.remove();
 		
 	</script>
     <script defer id="test">
